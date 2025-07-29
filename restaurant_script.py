@@ -3,6 +3,7 @@
 orders = {}
 plate_number = 0
 
+# Taking orders from the user
 table_number = input("Table number: ")
 a_plate = input("Type 1 to order a plate or 0 to procced: ")
 while a_plate != "0":
@@ -11,8 +12,13 @@ while a_plate != "0":
         a_plate = '0'
         main_course = input("Main course: ")
         garnishes = input("Garnishes: ")
-        orders [plate_number] = [table_number, main_course, garnishes]
+        orders [plate_number] = [main_course, garnishes]
     a_plate = input("Type 1 to order a plate or 0 to procced: ")
-print(orders)
 
+print(f"Orders for table {table_number}:")
 
+for plate_number, order in orders.items():
+    print(f"Plate {plate_number}: {order}")
+
+print("Orders have been taken successfully.")
+# Displaying the orders in a structured format
